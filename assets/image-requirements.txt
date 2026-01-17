@@ -1,0 +1,97 @@
+Image Requirements for Amit Sharma BJP Profile Website
+========================================================
+
+REQUIRED IMAGES:
+
+1. bjp-logo.png
+   - Size: 200x200px
+   - Format: PNG with transparent background
+   - Description: Official BJP party logo
+   - Usage: Navigation bar and branding
+
+2. amit-profile.jpg
+   - Size: 500x500px (square format)
+   - Format: JPG, high quality
+   - Description: Professional headshot/portrait of Amit Sharma
+   - Usage: Main hero section profile image
+   - Notes: Should be well-lit, professional attire, clear background
+
+3. amit-about.jpg
+   - Size: 600x400px (landscape format)
+   - Format: JPG, high quality
+   - Description: Professional photo of Amit Sharma in political/social context
+   - Usage: About section
+   - Notes: Could be from a political event, meeting, or professional setting
+
+4. gallery-1.jpg
+   - Size: 400x300px
+   - Description: Blood donation camp photo
+   - Shows: Amit Sharma at a blood donation event
+
+5. gallery-2.jpg
+   - Size: 400x300px
+   - Description: Political rally photo
+   - Shows: Amit Sharma addressing youth or at a rally
+
+6. gallery-3.jpg
+   - Size: 400x300px
+   - Description: Community meeting photo
+   - Shows: Amit Sharma in Ward 30 community interaction
+
+7. gallery-4.jpg
+   - Size: 400x300px
+   - Description: Social service activity
+   - Shows: Amit Sharma helping community members
+
+8. gallery-5.jpg
+   - Size: 400x300px
+   - Description: BJP event photo
+   - Shows: Amit Sharma at BJP party meetings/events
+
+9. gallery-6.jpg
+   - Size: 400x300px
+   - Description: Election campaign photo
+   - Shows: Amit Sharma during election campaigning
+
+PHOTO GUIDELINES:
+================
+
+Quality Standards:
+- High resolution (minimum 300 DPI)
+- Good lighting and clear focus
+- Professional appearance
+- Appropriate political/social context
+
+Content Guidelines:
+- Show Amit Sharma in leadership roles
+- Include community interaction scenes
+- Display BJP party involvement
+- Showcase social work activities
+- Maintain professional political image
+
+Technical Requirements:
+- Optimize for web (compress file sizes)
+- Maintain specified aspect ratios
+- Use appropriate file formats (JPG for photos, PNG for logos)
+- Ensure images are not copyrighted by others
+
+PLACEHOLDER ALTERNATIVES:
+========================
+
+If actual photos are not available immediately, you can use:
+- Professional stock photos of politicians
+- Generic community service images
+- BJP party promotional materials (with permission)
+- Placeholder images with proper dimensions
+
+Remember to replace all placeholders with actual photos before the website goes live.
+
+IMPORTANT NOTES:
+===============
+
+1. All images should represent Amit Sharma authentically
+2. Ensure you have rights to use all images
+3. Consider hiring a professional photographer for key images
+4. Maintain consistency in image quality and style
+5. Test images on different devices and screen sizes
+6. Keep backup copies of all original high-resolution images
