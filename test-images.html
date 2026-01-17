@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Test & Debug</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .test-image { 
+            width: 300px; 
+            height: 200px; 
+            object-fit: cover; 
+            border: 2px solid #ccc; 
+            margin: 10px;
+            display: block;
+            border-radius: 8px;
+        }
+        .error { color: red; }
+        .success { color: green; }
+        .warning { color: orange; }
+        .info { color: blue; }
+        .test-section { 
+            background: white; 
+            padding: 20px; 
+            margin: 20px 0; 
+            border-radius: 8px; 
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .debug-info { 
+            background: #f8f9fa; 
+            padding: 15px; 
+            border-left: 4px solid #007bff; 
+            margin: 10px 0;
+            font-family: monospace;
+        }
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover { background: #0056b3; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>COVID Images Test & Debug</h1>
+        
+        <div class="test-section">
+            <h2>System Information</h2>
+            <div id="systemInfo" class="debug-info">Loading system info...</div>
+        </div>
+        
+        <div class="test-section">
+            <h2>Quick Solutions</h2>
+            <div class="info">
+                <p><strong>If images aren't loading, try these solutions:</strong></p>
+                <ol>
+                    <li><strong>Use a local web server:</strong> Instead of opening HTML files directly, use a local server</li>
+                    <li><strong>Python:</strong> <code>python -m http.server 8000</code> then visit <code>http://localhost:8000</code></li>
+                    <li><strong>Node.js:</strong> <code>npx serve .</code> or <code>npx http-server</code></li>
+                    <li><strong>VS Code:</strong> Install "Live Server" extension and right-click HTML file → "Open with Live Server"</li>
+                </ol>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <h2>Image Loading Tests</h2>
+            <button onclick="runImageTests()">Run Image Tests</button>
+            <button onclick="clearResults()">Clear Results</button>
+            <div id="results"></div>
+        </div>
+        
+        <div class="test-section">
+            <h2>Gallery Preview</h2>
+            <p>This shows how the COVID gallery will look with placeholders:</p>
+            <div id="galleryPreview" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;"></div>
+        </div>
+    </div>
+    
+    <script src="debug-gallery.js"></script>
+    <script>
+        // System info
+        document.getElementById('systemInfo').innerHTML = `
+            Protocol: ${window.location.protocol}<br>
+            Host: ${window.location.host || 'N/A (file system)'}<br>
+            Origin: ${window.location.origin}<br>
+            User Agent: ${navigator.userAgent}<br>
+            <br>
+            ${window.location.protocol === 'file:' ? 
+                '<span class="warning">⚠️ Running from file system - may cause image loading issues</span>' : 
+                '<span class="success">✅ Running from web server</span>'
+            }
+        `;
+        
+        const covidImages = [
+            { src: 'assets/covid/covid-hero.jpg', title: 'COVID Relief Leadership' },
+            { src: 'assets/covid/1.jpg', title: 'Food Distribution Drive' },
+            { src: 'assets/covid/2.jpg', title: 'Community Kitchen Service' },
+            { src: 'assets/covid/3.jpg', title: 'Medical Assistance' },
+            { src: 'assets/covid/9.jpg', title: 'Safety Measures' },
+            { src: 'assets/covid/20200404_183500.jpg', title: 'Emergency Relief' }
+        ];
+        
+        function runImageTests() {
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = '<h3>Testing Images...</h3>';
+            
+            covidImages.forEach((imageData, index) => {
+                const container = document.createElement('div');
+                container.style.marginBottom = '20px';
+                container.style.padding = '15px';
+                container.style.border = '1px solid #ddd';
+                container.style.borderRadius = '5px';
+                
+                const title = document.createElement('h4');
+                title.textContent = `Test ${index + 1}: ${imageData.title}`;
+                container.appendChild(title);
+                
+                const pathInfo = document.createElement('p');
+                pathInfo.textContent = `Path: ${imageData.src}`;
+                pathInfo.style.fontFamily = 'monospace';
+                pathInfo.style.fontSize = '12px';
+                pathInfo.style.color = '#666';
+                container.appendChild(pathInfo);
+                
+                const img = document.createElement('img');
+                img.className = 'test-image';
+                img.alt = imageData.title;
+                
+                const status = document.createElement('p');
+                
+                img.onload = function() {
+                    status.innerHTML = `✅ <span class="success">Image loaded successfully</span><br>
+                                      Dimensions: ${this.naturalWidth}x${this.naturalHeight}px`;
+                };
+                
+                img.onerror = function() {
+                    status.innerHTML = `❌ <span class="error">Failed to load image</span>`;
+                    img.style.display = 'none';
+                    
+                    // Show placeholder instead
+                    const canvas = document.createElement('canvas');
+                    canvas.width = 300;
+                    canvas.height = 200;
+                    canvas.style.border = '2px solid #dc3545';
+                    canvas.style.borderRadius = '8px';
+                    const ctx = canvas.getContext('2d');
+                    
+                    // Draw COVID placeholder
+                    const gradient = ctx.createLinearGradient(0, 0, 300, 200);
+                    gradient.addColorStop(0, '#dc3545');
+                    gradient.addColorStop(1, '#ffffff');
+                    ctx.fillStyle = gradient;
+                    ctx.fillRect(0, 0, 300, 200);
+                    
+                    ctx.fillStyle = '#ffffff';
+                    ctx.font = 'bold 30px Arial';
+                    ctx.textAlign = 'center';
+                    ctx.fillText('♥', 150, 70);
+                    
+                    ctx.font = 'bold 14px Arial';
+                    ctx.fillText('COVID Relief Work', 150, 100);
+                    
+                    ctx.font = '12px Arial';
+                    ctx.fillText(imageData.title, 150, 120);
+                    
+                    ctx.font = '10px Arial';
+                    ctx.fillStyle = 'rgba(255,255,255,0.8)';
+                    ctx.fillText('Image temporarily unavailable', 150, 140);
+                    
+                    container.appendChild(canvas);
+                };
+                
+                img.src = imageData.src;
+                
+                container.appendChild(img);
+                container.appendChild(status);
+                resultsDiv.appendChild(container);
+            });
+        }
+        
+        function clearResults() {
+            document.getElementById('results').innerHTML = '';
+        }
+        
+        // Create gallery preview with placeholders
+        function createGalleryPreview() {
+            const preview = document.getElementById('galleryPreview');
+            
+            covidImages.slice(0, 6).forEach((imageData, index) => {
+                const item = document.createElement('div');
+                item.style.cssText = `
+                    background: white;
+                    border-radius: 10px;
+                    overflow: hidden;
+                    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+                    transition: transform 0.3s ease;
+                `;
+                
+                const canvas = document.createElement('canvas');
+                canvas.width = 300;
+                canvas.height = 200;
+                canvas.style.width = '100%';
+                canvas.style.height = '200px';
+                const ctx = canvas.getContext('2d');
+                
+                // Draw COVID placeholder
+                const colors = ['#dc3545', '#28a745', '#ffc107', '#17a2b8', '#6f42c1', '#fd7e14'];
+                const gradient = ctx.createLinearGradient(0, 0, 300, 200);
+                gradient.addColorStop(0, colors[index % colors.length]);
+                gradient.addColorStop(1, '#ffffff');
+                ctx.fillStyle = gradient;
+                ctx.fillRect(0, 0, 300, 200);
+                
+                ctx.fillStyle = '#ffffff';
+                ctx.font = 'bold 30px Arial';
+                ctx.textAlign = 'center';
+                ctx.fillText('♥', 150, 70);
+                
+                ctx.font = 'bold 12px Arial';
+                ctx.fillText('COVID Relief Work', 150, 100);
+                
+                ctx.font = '10px Arial';
+                ctx.fillText(imageData.title, 150, 120);
+                
+                const info = document.createElement('div');
+                info.style.padding = '15px';
+                info.innerHTML = `
+                    <h4 style="margin: 0 0 8px 0; color: #333;">${imageData.title}</h4>
+                    <p style="margin: 0; color: #666; font-size: 14px;">Community service during COVID-19 pandemic</p>
+                `;
+                
+                item.appendChild(canvas);
+                item.appendChild(info);
+                preview.appendChild(item);
+            });
+        }
+        
+        // Initialize
+        createGalleryPreview();
+        
+        // Auto-run tests after a delay
+        setTimeout(() => {
+            if (confirm('Would you like to run the image loading tests automatically?')) {
+                runImageTests();
+            }
+        }, 2000);
+    </script>
+</body>
+</html>
