@@ -77,6 +77,30 @@
     font-size: 0.9rem;
 }
 
+/* Special styling for COVID filter button */
+.filter-btn[data-filter="covid"] {
+    border-color: #dc3545;
+    color: #dc3545;
+    background: linear-gradient(135deg, #fff 0%, #ffe6e6 100%);
+}
+
+.filter-btn[data-filter="covid"]:hover,
+.filter-btn[data-filter="covid"].active {
+    background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+    color: var(--white);
+    border-color: #dc3545;
+    box-shadow: 0 4px 12px rgba(220, 53, 69, 0.3);
+}
+
+.filter-btn[data-filter="covid"] i {
+    color: #dc3545;
+}
+
+.filter-btn[data-filter="covid"]:hover i,
+.filter-btn[data-filter="covid"].active i {
+    color: var(--white);
+}
+
 /* Gallery Grid */
 .gallery-grid {
     background: var(--white);

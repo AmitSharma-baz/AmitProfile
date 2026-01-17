@@ -4,6 +4,155 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Gallery data - all timeline photos organized by year
     const galleryData = {
+        'covid': [
+            {
+                src: 'assets/covid/covid-hero.jpg',
+                title: 'COVID Relief Leadership',
+                description: 'Leading community relief efforts during the pandemic crisis',
+                year: 'covid',
+                category: 'leadership'
+            },
+            {
+                src: 'assets/covid/FoodDuringCovid.jpg',
+                title: 'Food Distribution During COVID',
+                description: 'Organizing food distribution for families affected by lockdown',
+                year: 'covid',
+                category: 'food-relief'
+            },
+            {
+                src: 'assets/covid/FoodCooking.jpg',
+                title: 'Community Kitchen Service',
+                description: 'Setting up community kitchens for daily meal preparation',
+                year: 'covid',
+                category: 'food-relief'
+            },
+            {
+                src: 'assets/covid/DonationFood.jpg',
+                title: 'Food Donation Drive',
+                description: 'Coordinating food donations from community members',
+                year: 'covid',
+                category: 'food-relief'
+            },
+            {
+                src: 'assets/covid/FoodDuringCovid1.jpg',
+                title: 'Food Relief Program Phase 1',
+                description: 'First phase of comprehensive food distribution program',
+                year: 'covid',
+                category: 'food-relief'
+            },
+            {
+                src: 'assets/covid/FoodDuringCovid2.jpg',
+                title: 'Food Relief Program Phase 2',
+                description: 'Expanding food distribution to reach more families',
+                year: 'covid',
+                category: 'food-relief'
+            },
+            {
+                src: 'assets/covid/FoodDuringCovid3.jpg',
+                title: 'Food Relief Program Phase 3',
+                description: 'Continuous food support during extended lockdown',
+                year: 'covid',
+                category: 'food-relief'
+            },
+            {
+                src: 'assets/covid/FoodDuringCovid4.jpg',
+                title: 'Food Relief Program Phase 4',
+                description: 'Final phase ensuring no family goes hungry',
+                year: 'covid',
+                category: 'food-relief'
+            },
+            {
+                src: 'assets/covid/PeopleBusFacility.jpg',
+                title: 'Bus Transportation Facility',
+                description: 'Arranging bus transportation for stranded people during lockdown',
+                year: 'covid',
+                category: 'transportation'
+            },
+            {
+                src: 'assets/covid/TicketDistribution.jpg',
+                title: 'Train Ticket Distribution',
+                description: 'Distributing train tickets to help people reach their homes',
+                year: 'covid',
+                category: 'transportation'
+            },
+            {
+                src: 'assets/covid/TicketDistribution2.jpg',
+                title: 'Train Ticket Distribution Drive 2',
+                description: 'Second phase of ticket distribution for migrant workers',
+                year: 'covid',
+                category: 'transportation'
+            },
+            {
+                src: 'assets/covid/TicketDistribution3.jpg',
+                title: 'Train Ticket Distribution Drive 3',
+                description: 'Continued efforts to help stranded workers return home',
+                year: 'covid',
+                category: 'transportation'
+            },
+            {
+                src: 'assets/covid/TicketDistribution4.jpg',
+                title: 'Train Ticket Distribution Drive 4',
+                description: 'Ensuring every stranded person gets transportation help',
+                year: 'covid',
+                category: 'transportation'
+            },
+            {
+                src: 'assets/covid/TicketDistribution5.jpg',
+                title: 'Train Ticket Distribution Drive 5',
+                description: 'Final phase of transportation assistance program',
+                year: 'covid',
+                category: 'transportation'
+            },
+            {
+                src: 'assets/covid/TrainTicketOnMyNameTrain.jpg',
+                title: 'Personal Train Ticket Arrangement',
+                description: 'Personal involvement in arranging train tickets for stranded workers',
+                year: 'covid',
+                category: 'transportation'
+            },
+            {
+                src: 'assets/covid/Ticket.jpg',
+                title: 'Transportation Ticket Management',
+                description: 'Managing and organizing transportation tickets for distribution',
+                year: 'covid',
+                category: 'transportation'
+            },
+            {
+                src: 'assets/covid/LetterFromCollectorSendPeopleTrain.jpg',
+                title: 'Official Letter from Collector',
+                description: 'Official correspondence for arranging transportation for people',
+                year: 'covid',
+                category: 'official-work'
+            },
+            {
+                src: 'assets/covid/TicketFromCollectorTome.jpg',
+                title: 'Ticket Authorization from Collector',
+                description: 'Official authorization received from Collector for ticket distribution',
+                year: 'covid',
+                category: 'official-work'
+            },
+            {
+                src: 'assets/covid/Donation.jpg',
+                title: 'Community Donation Drive',
+                description: 'Organizing donation drives for COVID relief efforts',
+                year: 'covid',
+                category: 'community-support'
+            },
+            {
+                src: 'assets/covid/IMG-20200526-WA0004.jpg',
+                title: 'WhatsApp Coordination',
+                description: 'Using digital platforms for effective relief coordination',
+                year: 'covid',
+                category: 'digital-coordination'
+            },
+            {
+                src: 'assets/covid/Screenshot_20200428-191934_Gallery.jpg',
+                title: 'Digital Documentation',
+                description: 'Documenting relief work for transparency and accountability',
+                year: 'covid',
+                category: 'documentation'
+            }
+        ],
         '2018': [
             {
                 src: 'assets/timeline/2018-1.jpg',
@@ -284,35 +433,142 @@ document.addEventListener('DOMContentLoaded', function() {
         canvas.height = 250;
         const ctx = canvas.getContext('2d');
         
-        // Draw placeholder
-        ctx.fillStyle = '#f5821f';
-        ctx.fillRect(0, 0, 400, 250);
-        ctx.fillStyle = '#ffffff';
-        ctx.font = 'bold 24px Arial';
-        ctx.textAlign = 'center';
-        ctx.fillText('Photo Coming Soon', 200, 125);
+        // Draw placeholder with category info
+        const isCovidPhoto = photo.year === 'covid';
+        
+        if (isCovidPhoto) {
+            // COVID-specific placeholder with category-based colors
+            const categoryColors = {
+                'food-relief': '#28a745',
+                'medical-aid': '#dc3545',
+                'safety': '#ffc107',
+                'emergency-response': '#fd7e14',
+                'coordination': '#6f42c1',
+                'community-support': '#20c997',
+                'awareness': '#17a2b8',
+                'sanitization': '#6c757d',
+                'dedication': '#e83e8c',
+                'default': '#dc3545'
+            };
+            
+            const bgColor = categoryColors[photo.category] || categoryColors.default;
+            
+            // Gradient background
+            const gradient = ctx.createLinearGradient(0, 0, 400, 250);
+            gradient.addColorStop(0, bgColor);
+            gradient.addColorStop(1, '#ffffff');
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, 400, 250);
+            
+            // Add COVID relief icon (heart)
+            ctx.fillStyle = '#ffffff';
+            ctx.font = 'bold 40px Arial';
+            ctx.textAlign = 'center';
+            ctx.fillText('♥', 200, 80);
+            
+            // Title
+            ctx.font = 'bold 18px Arial';
+            ctx.fillStyle = '#ffffff';
+            ctx.fillText('COVID Relief Work', 200, 120);
+            
+            // Category
+            ctx.font = 'bold 14px Arial';
+            const categoryText = photo.category ? photo.category.replace('-', ' ').toUpperCase() : 'COMMUNITY SERVICE';
+            ctx.fillText(categoryText, 200, 145);
+            
+            // Loading text
+            ctx.font = '12px Arial';
+            ctx.fillStyle = 'rgba(255,255,255,0.8)';
+            ctx.fillText('Photo Loading...', 200, 170);
+            
+        } else {
+            // Regular placeholder
+            ctx.fillStyle = '#f5821f';
+            ctx.fillRect(0, 0, 400, 250);
+            ctx.fillStyle = '#ffffff';
+            ctx.font = 'bold 20px Arial';
+            ctx.textAlign = 'center';
+            ctx.fillText('Photo Coming Soon', 200, 125);
+        }
         
         const placeholderDataUrl = canvas.toDataURL();
         
-        // Try to load actual image, fallback to canvas placeholder
-        img.onload = function() {
-            // Image loaded successfully
+        // Set placeholder initially
+        img.src = placeholderDataUrl;
+        
+        // Try to load actual image
+        const actualImg = new Image();
+        actualImg.onload = function() {
+            // Image loaded successfully, replace placeholder
+            img.src = photo.src;
+            console.log('Successfully loaded:', photo.src);
         };
         
-        img.onerror = function() {
-            // Prevent infinite loop by removing error handler
-            this.onerror = null;
-            this.src = placeholderDataUrl;
+        actualImg.onerror = function() {
+            // Keep placeholder and log error
+            console.warn('Failed to load image:', photo.src);
+            // Update placeholder to show it's a real photo that couldn't load
+            if (isCovidPhoto) {
+                const canvas2 = document.createElement('canvas');
+                canvas2.width = 400;
+                canvas2.height = 250;
+                const ctx2 = canvas2.getContext('2d');
+                
+                const categoryColors = {
+                    'food-relief': '#28a745',
+                    'medical-aid': '#dc3545',
+                    'safety': '#ffc107',
+                    'emergency-response': '#fd7e14',
+                    'coordination': '#6f42c1',
+                    'community-support': '#20c997',
+                    'awareness': '#17a2b8',
+                    'sanitization': '#6c757d',
+                    'dedication': '#e83e8c',
+                    'default': '#dc3545'
+                };
+                
+                const bgColor = categoryColors[photo.category] || categoryColors.default;
+                
+                // Gradient background
+                const gradient = ctx2.createLinearGradient(0, 0, 400, 250);
+                gradient.addColorStop(0, bgColor);
+                gradient.addColorStop(1, '#ffffff');
+                ctx2.fillStyle = gradient;
+                ctx2.fillRect(0, 0, 400, 250);
+                
+                // Add COVID relief icon
+                ctx2.fillStyle = '#ffffff';
+                ctx2.font = 'bold 40px Arial';
+                ctx2.textAlign = 'center';
+                ctx2.fillText('♥', 200, 80);
+                
+                // Title
+                ctx2.font = 'bold 16px Arial';
+                ctx2.fillStyle = '#ffffff';
+                ctx2.fillText('COVID Relief Photo', 200, 120);
+                
+                // Category
+                ctx2.font = 'bold 12px Arial';
+                const categoryText = photo.category ? photo.category.replace('-', ' ').toUpperCase() : 'COMMUNITY SERVICE';
+                ctx2.fillText(categoryText, 200, 140);
+                
+                // Status
+                ctx2.font = '11px Arial';
+                ctx2.fillStyle = 'rgba(255,255,255,0.8)';
+                ctx2.fillText('Image temporarily unavailable', 200, 165);
+                
+                img.src = canvas2.toDataURL();
+            }
         };
         
-        // Set the source
-        img.src = photo.src;
+        // Start loading the actual image
+        actualImg.src = photo.src;
 
         galleryItem.innerHTML = `
             <div class="gallery-overlay">
                 <h5>${photo.title}</h5>
                 <p>${photo.description}</p>
-                <span class="year-badge">${photo.year}</span>
+                <span class="year-badge">${photo.year === 'covid' ? 'COVID Relief' : photo.year}</span>
             </div>
         `;
         
@@ -439,7 +695,7 @@ document.addEventListener('DOMContentLoaded', function() {
         imageTitle.textContent = photo.title;
         imageDescription.textContent = photo.description;
         imageCounter.textContent = `${currentPhotoIndex + 1} of ${filteredPhotos.length}`;
-        imageYear.textContent = photo.year;
+        imageYear.textContent = photo.year === 'covid' ? 'COVID Relief' : photo.year;
 
         // Update navigation buttons
         prevBtn.disabled = currentPhotoIndex === 0;
@@ -449,22 +705,32 @@ document.addEventListener('DOMContentLoaded', function() {
         const img = new Image();
         img.onload = function() {
             modalImage.src = photo.src;
+            console.log('Modal image loaded:', photo.src);
         };
         
         img.onerror = function() {
+            console.warn('Modal image failed to load:', photo.src);
             // Create canvas placeholder for modal
             const canvas = document.createElement('canvas');
             canvas.width = 800;
             canvas.height = 600;
             const ctx = canvas.getContext('2d');
             
-            // Draw placeholder
-            ctx.fillStyle = '#f5821f';
+            // Draw placeholder with appropriate styling
+            const isCovidPhoto = photo.year === 'covid';
+            ctx.fillStyle = isCovidPhoto ? '#dc3545' : '#f5821f';
             ctx.fillRect(0, 0, 800, 600);
             ctx.fillStyle = '#ffffff';
-            ctx.font = 'bold 36px Arial';
+            ctx.font = 'bold 32px Arial';
             ctx.textAlign = 'center';
-            ctx.fillText('Photo Coming Soon', 400, 300);
+            
+            if (isCovidPhoto) {
+                ctx.fillText('COVID Relief Photo', 400, 280);
+                ctx.font = 'bold 24px Arial';
+                ctx.fillText('Image not available', 400, 320);
+            } else {
+                ctx.fillText('Photo Coming Soon', 400, 300);
+            }
             
             modalImage.src = canvas.toDataURL();
         };
