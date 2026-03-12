@@ -11,6 +11,118 @@ const galleryData = {
             "category": "community"
         },
         {
+            "src": "assets/gallery/1000329816.jpg",
+            "year": "all",
+            "title": "Gallery Photo",
+            "description": "Moment captured",
+            "category": "community"
+        },
+        {
+            "src": "assets/gallery/1000349569.jpg",
+            "year": "all",
+            "title": "Gallery Photo",
+            "description": "Moment captured",
+            "category": "community"
+        },
+        {
+            "src": "assets/gallery/1000349670.jpg",
+            "year": "all",
+            "title": "Gallery Photo",
+            "description": "Moment captured",
+            "category": "community"
+        },
+        {
+            "src": "assets/gallery/1000370289.jpg",
+            "year": "all",
+            "title": "Gallery Photo",
+            "description": "Moment captured",
+            "category": "community"
+        },
+        {
+            "src": "assets/gallery/1000374246.jpg",
+            "year": "all",
+            "title": "Gallery Photo",
+            "description": "Moment captured",
+            "category": "community"
+        },
+        {
+            "src": "assets/gallery/1000374300.jpg",
+            "year": "all",
+            "title": "Gallery Photo",
+            "description": "Moment captured",
+            "category": "community"
+        },
+        {
+            "src": "assets/gallery/1000374381.jpg",
+            "year": "all",
+            "title": "Gallery Photo",
+            "description": "Moment captured",
+            "category": "community"
+        },
+        {
+            "src": "assets/gallery/1000380243.jpg",
+            "year": "all",
+            "title": "Gallery Photo",
+            "description": "Moment captured",
+            "category": "community"
+        },
+        {
+            "src": "assets/gallery/1000380255.jpg",
+            "year": "all",
+            "title": "Gallery Photo",
+            "description": "Moment captured",
+            "category": "community"
+        },
+        {
+            "src": "assets/gallery/1000385387.jpg",
+            "year": "all",
+            "title": "Gallery Photo",
+            "description": "Moment captured",
+            "category": "community"
+        },
+        {
+            "src": "assets/gallery/1000385666.jpg",
+            "year": "all",
+            "title": "Gallery Photo",
+            "description": "Moment captured",
+            "category": "community"
+        },
+        {
+            "src": "assets/gallery/1000388613.webp",
+            "year": "all",
+            "title": "Gallery Photo",
+            "description": "Moment captured",
+            "category": "community"
+        },
+        {
+            "src": "assets/gallery/1000396593.jpg",
+            "year": "all",
+            "title": "Gallery Photo",
+            "description": "Moment captured",
+            "category": "community"
+        },
+        {
+            "src": "assets/gallery/1000397323.webp",
+            "year": "all",
+            "title": "Gallery Photo",
+            "description": "Moment captured",
+            "category": "community"
+        },
+        {
+            "src": "assets/gallery/1000398815.jpg",
+            "year": "all",
+            "title": "Gallery Photo",
+            "description": "Moment captured",
+            "category": "community"
+        },
+        {
+            "src": "assets/gallery/1000399040.jpg",
+            "year": "all",
+            "title": "Gallery Photo",
+            "description": "Moment captured",
+            "category": "community"
+        },
+        {
             "src": "assets/gallery/1000412802.jpg",
             "year": "all",
             "title": "Gallery Photo",
@@ -88,28 +200,7 @@ const galleryData = {
             "category": "community"
         },
         {
-            "src": "assets/gallery/1000734798.jpg",
-            "year": "all",
-            "title": "Gallery Photo",
-            "description": "Moment captured",
-            "category": "community"
-        },
-        {
             "src": "assets/gallery/1000734918.jpg",
-            "year": "all",
-            "title": "Gallery Photo",
-            "description": "Moment captured",
-            "category": "community"
-        },
-        {
-            "src": "assets/gallery/1000800212.jpg",
-            "year": "all",
-            "title": "Gallery Photo",
-            "description": "Moment captured",
-            "category": "community"
-        },
-        {
-            "src": "assets/gallery/1000835594.jpg",
             "year": "all",
             "title": "Gallery Photo",
             "description": "Moment captured",
@@ -144,13 +235,6 @@ const galleryData = {
             "category": "community"
         },
         {
-            "src": "assets/gallery/1001092254.jpg",
-            "year": "all",
-            "title": "Gallery Photo",
-            "description": "Moment captured",
-            "category": "community"
-        },
-        {
             "src": "assets/gallery/1001170046.jpg",
             "year": "all",
             "title": "Gallery Photo",
@@ -158,7 +242,35 @@ const galleryData = {
             "category": "community"
         },
         {
+            "src": "assets/gallery/11_aatmanirbhar bharat.jpg",
+            "year": "all",
+            "title": "Gallery Photo",
+            "description": "Moment captured",
+            "category": "community"
+        },
+        {
+            "src": "assets/gallery/12_aahar vitran.jpg",
+            "year": "all",
+            "title": "Gallery Photo",
+            "description": "Moment captured",
+            "category": "community"
+        },
+        {
+            "src": "assets/gallery/13 gst benefir to shops.jpg",
+            "year": "all",
+            "title": "Gallery Photo",
+            "description": "Moment captured",
+            "category": "community"
+        },
+        {
             "src": "assets/gallery/179f7a0c-c281-4887-a9cf-e09c6c799d32.jpg",
+            "year": "all",
+            "title": "Gallery Photo",
+            "description": "Moment captured",
+            "category": "community"
+        },
+        {
+            "src": "assets/gallery/1_Donation.jpg",
             "year": "all",
             "title": "Gallery Photo",
             "description": "Moment captured",
@@ -173,6 +285,13 @@ const galleryData = {
         },
         {
             "src": "assets/gallery/1ce70f99-9de9-4147-85ac-ec15e3a60db8.jpg",
+            "year": "all",
+            "title": "Gallery Photo",
+            "description": "Moment captured",
+            "category": "community"
+        },
+        {
+            "src": "assets/gallery/2_mankibaat.jpg",
             "year": "all",
             "title": "Gallery Photo",
             "description": "Moment captured",
@@ -200,6 +319,13 @@ const galleryData = {
             "category": "community"
         },
         {
+            "src": "assets/gallery/3_Yuva Jodo.jpg",
+            "year": "all",
+            "title": "Gallery Photo",
+            "description": "Moment captured",
+            "category": "community"
+        },
+        {
             "src": "assets/gallery/3ca62d33-1208-4d3a-a3c5-9cff9e62b5b6.jpg",
             "year": "all",
             "title": "Gallery Photo",
@@ -214,6 +340,76 @@ const galleryData = {
             "category": "community"
         },
         {
+            "src": "assets/gallery/467601367_9037288962990067_6394681731417226200_n.jpg",
+            "year": "all",
+            "title": "Gallery Photo",
+            "description": "Moment captured",
+            "category": "community"
+        },
+        {
+            "src": "assets/gallery/476044991_9426882950697331_6183058393788934168_n.jpg",
+            "year": "all",
+            "title": "Gallery Photo",
+            "description": "Moment captured",
+            "category": "community"
+        },
+        {
+            "src": "assets/gallery/487467154_9768469636538659_5772488581645343055_n.jpg",
+            "year": "all",
+            "title": "Gallery Photo",
+            "description": "Moment captured",
+            "category": "community"
+        },
+        {
+            "src": "assets/gallery/487526294_9773623259356630_8153476867017459312_n.jpg",
+            "year": "all",
+            "title": "Gallery Photo",
+            "description": "Moment captured",
+            "category": "community"
+        },
+        {
+            "src": "assets/gallery/487812286_9773622859356670_4858397565482076954_n.jpg",
+            "year": "all",
+            "title": "Gallery Photo",
+            "description": "Moment captured",
+            "category": "community"
+        },
+        {
+            "src": "assets/gallery/487813020_9768468239872132_6320471843907753436_n.jpg",
+            "year": "all",
+            "title": "Gallery Photo",
+            "description": "Moment captured",
+            "category": "community"
+        },
+        {
+            "src": "assets/gallery/488020842_9768468013205488_7743559224688071041_n.jpg",
+            "year": "all",
+            "title": "Gallery Photo",
+            "description": "Moment captured",
+            "category": "community"
+        },
+        {
+            "src": "assets/gallery/488038322_9768469489872007_6266074161104147153_n.jpg",
+            "year": "all",
+            "title": "Gallery Photo",
+            "description": "Moment captured",
+            "category": "community"
+        },
+        {
+            "src": "assets/gallery/488127078_9768469543205335_4048904006530171448_n.jpg",
+            "year": "all",
+            "title": "Gallery Photo",
+            "description": "Moment captured",
+            "category": "community"
+        },
+        {
+            "src": "assets/gallery/488307946_9773623249356631_2937795007946652077_n.jpg",
+            "year": "all",
+            "title": "Gallery Photo",
+            "description": "Moment captured",
+            "category": "community"
+        },
+        {
             "src": "assets/gallery/48a85c6d-aea3-4c38-b675-2c5a030dd3ad.jpg",
             "year": "all",
             "title": "Gallery Photo",
@@ -222,6 +418,13 @@ const galleryData = {
         },
         {
             "src": "assets/gallery/4907e223-ad11-43cc-a509-2fa566a91d9f.jpg",
+            "year": "all",
+            "title": "Gallery Photo",
+            "description": "Moment captured",
+            "category": "community"
+        },
+        {
+            "src": "assets/gallery/4_prashikshan varg taiyari.jpg",
             "year": "all",
             "title": "Gallery Photo",
             "description": "Moment captured",
@@ -256,7 +459,133 @@ const galleryData = {
             "category": "community"
         },
         {
+            "src": "assets/gallery/556940694_24999022213056820_4135140121260670776_n.jpg",
+            "year": "all",
+            "title": "Gallery Photo",
+            "description": "Moment captured",
+            "category": "community"
+        },
+        {
+            "src": "assets/gallery/557996710_24999022429723465_7171738703666101620_n.jpg",
+            "year": "all",
+            "title": "Gallery Photo",
+            "description": "Moment captured",
+            "category": "community"
+        },
+        {
+            "src": "assets/gallery/558914069_24999023183056723_1404668586765517289_n.jpg",
+            "year": "all",
+            "title": "Gallery Photo",
+            "description": "Moment captured",
+            "category": "community"
+        },
+        {
+            "src": "assets/gallery/560321561_25132994866326220_7378929779772615729_n.jpg",
+            "year": "all",
+            "title": "Gallery Photo",
+            "description": "Moment captured",
+            "category": "community"
+        },
+        {
+            "src": "assets/gallery/560568408_25132992846326422_6076670373417264880_n.jpg",
+            "year": "all",
+            "title": "Gallery Photo",
+            "description": "Moment captured",
+            "category": "community"
+        },
+        {
+            "src": "assets/gallery/561052409_25132899783002395_887202519217845867_n.jpg",
+            "year": "all",
+            "title": "Gallery Photo",
+            "description": "Moment captured",
+            "category": "community"
+        },
+        {
+            "src": "assets/gallery/565243599_25132899643002409_7120227666142162332_n.jpg",
+            "year": "all",
+            "title": "Gallery Photo",
+            "description": "Moment captured",
+            "category": "community"
+        },
+        {
+            "src": "assets/gallery/565637243_25145178731774500_1172430742988133471_n.jpg",
+            "year": "all",
+            "title": "Gallery Photo",
+            "description": "Moment captured",
+            "category": "community"
+        },
+        {
+            "src": "assets/gallery/565714468_25145185208440519_784077987328155176_n.jpg",
+            "year": "all",
+            "title": "Gallery Photo",
+            "description": "Moment captured",
+            "category": "community"
+        },
+        {
+            "src": "assets/gallery/575111801_25310295818596123_176964279131635355_n.jpg",
+            "year": "all",
+            "title": "Gallery Photo",
+            "description": "Moment captured",
+            "category": "community"
+        },
+        {
+            "src": "assets/gallery/577231968_25337821279176910_3305581489073049895_n.jpg",
+            "year": "all",
+            "title": "Gallery Photo",
+            "description": "Moment captured",
+            "category": "community"
+        },
+        {
+            "src": "assets/gallery/583701690_25422826804009690_3153035734503750078_n.jpg",
+            "year": "all",
+            "title": "Gallery Photo",
+            "description": "Moment captured",
+            "category": "community"
+        },
+        {
+            "src": "assets/gallery/584426687_25422826950676342_5045363625149266039_n.jpg",
+            "year": "all",
+            "title": "Gallery Photo",
+            "description": "Moment captured",
+            "category": "community"
+        },
+        {
+            "src": "assets/gallery/584540956_25422824124009958_8788363628438491856_n.jpg",
+            "year": "all",
+            "title": "Gallery Photo",
+            "description": "Moment captured",
+            "category": "community"
+        },
+        {
+            "src": "assets/gallery/587920759_1378243397645731_7710053418971090277_n.jpg",
+            "year": "all",
+            "title": "Gallery Photo",
+            "description": "Moment captured",
+            "category": "community"
+        },
+        {
+            "src": "assets/gallery/588783595_1378243150979089_2381684274253671634_n.jpg",
+            "year": "all",
+            "title": "Gallery Photo",
+            "description": "Moment captured",
+            "category": "community"
+        },
+        {
+            "src": "assets/gallery/5_road made with help of corporators.jpg",
+            "year": "all",
+            "title": "Gallery Photo",
+            "description": "Moment captured",
+            "category": "community"
+        },
+        {
             "src": "assets/gallery/5e405958-fbb1-4860-b9a3-fc5b12006d3e.jpg",
+            "year": "all",
+            "title": "Gallery Photo",
+            "description": "Moment captured",
+            "category": "community"
+        },
+        {
+            "src": "assets/gallery/610915086_25838615015764198_7471336618648107910_n.jpg",
             "year": "all",
             "title": "Gallery Photo",
             "description": "Moment captured",
@@ -278,6 +607,13 @@ const galleryData = {
         },
         {
             "src": "assets/gallery/66D96FA6-4096-46E9-A6F7-1036B92C70D0.jpg",
+            "year": "all",
+            "title": "Gallery Photo",
+            "description": "Moment captured",
+            "category": "community"
+        },
+        {
+            "src": "assets/gallery/6_chath puja ayojan.jpg",
             "year": "all",
             "title": "Gallery Photo",
             "description": "Moment captured",
@@ -312,6 +648,13 @@ const galleryData = {
             "category": "community"
         },
         {
+            "src": "assets/gallery/7_bihar schunav surat airport.jpg",
+            "year": "all",
+            "title": "Gallery Photo",
+            "description": "Moment captured",
+            "category": "community"
+        },
+        {
             "src": "assets/gallery/7eda1065-aff8-46c5-81a5-abe382f3b00f.jpg",
             "year": "all",
             "title": "Gallery Photo",
@@ -320,6 +663,13 @@ const galleryData = {
         },
         {
             "src": "assets/gallery/80A8ACD2-5566-4787-B9AE-B84A24D6D399.jpg",
+            "year": "all",
+            "title": "Gallery Photo",
+            "description": "Moment captured",
+            "category": "community"
+        },
+        {
+            "src": "assets/gallery/8_chath puja ayojan.jpg",
             "year": "all",
             "title": "Gallery Photo",
             "description": "Moment captured",
@@ -347,7 +697,21 @@ const galleryData = {
             "category": "community"
         },
         {
+            "src": "assets/gallery/9_tv patient kit vitran.jpg",
+            "year": "all",
+            "title": "Gallery Photo",
+            "description": "Moment captured",
+            "category": "community"
+        },
+        {
             "src": "assets/gallery/9dd591d7-be9f-4098-91fa-201185b05a01.jpg",
+            "year": "all",
+            "title": "Gallery Photo",
+            "description": "Moment captured",
+            "category": "community"
+        },
+        {
+            "src": "assets/gallery/BJP meeting.jpg",
             "year": "all",
             "title": "Gallery Photo",
             "description": "Moment captured",
@@ -445,13 +809,6 @@ const galleryData = {
             "category": "community"
         },
         {
-            "src": "assets/gallery/IMG_2167.MOV",
-            "year": "all",
-            "title": "Gallery Photo",
-            "description": "Moment captured",
-            "category": "community"
-        },
-        {
             "src": "assets/gallery/IMG_2215.jpg",
             "year": "all",
             "title": "Gallery Photo",
@@ -495,6 +852,13 @@ const galleryData = {
         },
         {
             "src": "assets/gallery/IMG_3891.JPG",
+            "year": "all",
+            "title": "Gallery Photo",
+            "description": "Moment captured",
+            "category": "community"
+        },
+        {
+            "src": "assets/gallery/IMG_4479.JPG.jpeg",
             "year": "all",
             "title": "Gallery Photo",
             "description": "Moment captured",
@@ -592,21 +956,14 @@ const galleryData = {
             "category": "community"
         },
         {
-            "src": "assets/gallery/IMG_9199.JPG",
-            "year": "all",
-            "title": "Gallery Photo",
-            "description": "Moment captured",
-            "category": "community"
-        },
-        {
-            "src": "assets/gallery/IMG_9671.mov",
-            "year": "all",
-            "title": "Gallery Photo",
-            "description": "Moment captured",
-            "category": "community"
-        },
-        {
             "src": "assets/gallery/IMG_9856.JPG",
+            "year": "all",
+            "title": "Gallery Photo",
+            "description": "Moment captured",
+            "category": "community"
+        },
+        {
+            "src": "assets/gallery/Screenshot 2026-03-12 184959.jpg",
             "year": "all",
             "title": "Gallery Photo",
             "description": "Moment captured",
