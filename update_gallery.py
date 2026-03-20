@@ -7,7 +7,6 @@ OUTPUT_FILE = r'gallery-data.js'
 EXTENSIONS = ('.jpg', '.jpeg', '.png', '.mov', '.gif', '.webp')
 
 def main():
-    # Base directory is the directory where this script is located
     base_dir = os.getcwd()
     abs_gallery_dir = os.path.join(base_dir, GALLERY_DIR)
     
@@ -15,39 +14,37 @@ def main():
         print(f"Error: Directory not found: {abs_gallery_dir}")
         return
 
-    # List compatible files
-    files = [f for f in os.listdir(abs_gallery_dir) if f.lower().endswith(EXTENSIONS)]
-    
-    # Sort files to ensure consistent order (optional, by name)
-    files.sort()
-
-    print(f"Found {len(files)} images in {GALLERY_DIR}")
-
-    # Generate the data structure
-    # Structure: 'all' category containing all images
-    # We assign a default title/desc, user can manually edit if they really want, 
-    # but the primary goal is auto-loading.
     gallery_data = {
         'all': []
     }
 
-    for filename in files:
-        item = {
-            'src': f'assets/gallery/{filename}',
-            'year': 'all',  # Default category
-            'title': 'Gallery Photo',
-            'description': 'Moment captured',
-            'category': 'community' # Default category
-        }
-        gallery_data['all'].append(item)
+    count = 0
+    for root, dirs, files in os.walk(abs_gallery_dir):
+        files.sort()
+        for filename in files:
+            if filename.lower().endswith(EXTENSIONS):
+                # Determine filter category
+                rel_dir = os.path.relpath(root, abs_gallery_dir)
+                category = 'all' if rel_dir == '.' else rel_dir.replace('\\', '/').split('/')[-1].lower()
+                
+                # Src should be relative to base_dir
+                rel_path = os.path.relpath(os.path.join(root, filename), base_dir).replace('\\', '/')
+                
+                item = {
+                    'src': rel_path,
+                    'year': category,  # Used as the filter key
+                    'title': 'Gallery Photo',
+                    'description': 'Moment captured',
+                    'category': category
+                }
+                gallery_data['all'].append(item)
+                count += 1
 
-    # Convert to JSON string
+    print(f"Found {count} images in {GALLERY_DIR}")
+
     json_str = json.dumps(gallery_data, indent=4)
-    
-    # Create the JS content
     js_content = f"// Auto-generated gallery data\n// Run update_gallery.bat to update this file after adding images\n\nconst galleryData = {json_str};\n"
 
-    # Write to file
     output_path = os.path.join(base_dir, OUTPUT_FILE)
     try:
         with open(output_path, 'w', encoding='utf-8') as f:
